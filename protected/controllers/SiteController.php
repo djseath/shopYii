@@ -3,7 +3,7 @@
 class SiteController extends Controller
 {
 	public function actionIndex(){
-		echo 45;
+		$this->render('index');
 	}
 
 

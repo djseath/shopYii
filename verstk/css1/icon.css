@@ -1,0 +1,55 @@
+.phone_i:before, .mail_i:before, .cart_i:before, .pin_i:before, .cart_i_w:before, .edit_i:before, .close_i:before, .leftBut:before, .reloadBut:before {
+  content: "";
+  width: 16px;
+  height: 100%;
+  padding: 10px;
+  color: rgba(51, 51, 51, 0); }
+
+.reloadBut:before {
+  widows: 7px;
+  padding: 10px 6px;
+  background: url("../img/reload.png") left no-repeat; }
+
+.leftBut:before {
+  widows: 7px;
+  padding: 10px 6px;
+  background: url("../img/left.png") left no-repeat; }
+
+.close_i:before {
+  background: url("../img/close.png") center no-repeat; }
+
+.edit_i:before {
+  background: url("../img/edit_b.png") center no-repeat; }
+
+.phone_i:before {
+  background: url("../img/phone.png") center no-repeat; }
+
+.mail_i:before {
+  background: url("../img/mail.png") center no-repeat; }
+
+.cart_i:before {
+  width: 20px;
+  padding: 10px 25px 10px 0px;
+  background: url("../img/cart.png") left no-repeat; }
+
+.pin_i:before {
+  width: 20px;
+  padding: 10px 25px 10px 0px;
+  background: url("../img/pin.png") 5px no-repeat; }
+
+.fb_i:before, .gl_i:before, .tw_i:before {
+  content: ""; }
+
+.fb_i:before {
+  background: url("../img/fb.png") no-repeat; }
+
+.tw_i:before {
+  background: url("../img/tw.png") no-repeat; }
+
+.gl_i:before {
+  background: url("../img/gl.png") no-repeat; }
+
+.cart_i_w:before {
+  width: 20px;
+  padding: 10px 25px 10px 0px;
+  background: url("../img/cart_w.png") left no-repeat; }

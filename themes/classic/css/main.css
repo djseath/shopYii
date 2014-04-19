@@ -488,6 +488,10 @@ h3 {
   color: #444;
   margin-top: 0px 0px;
   padding: 0px 0 20px 0; }
+h3 a{
+	text-decoration:none;
+	color: #444;
+}
 
 h4 {
   font: 20px "Bitter";
@@ -1813,9 +1817,26 @@ table td:nth-child(2n) {
   margin-right: 10px;
   display: block;
   float: left; }
+
+  
+
+  .breadcrumbs span {
+  text-decoration: none;
+  color: #999;
+  font: 11px "Segoe UI";
+  margin-right: 10px;
+  display: block;
+  float: left; }
+
+  
+
+
 .breadcrumbs a:first-child:before {
-  display: none; }
-.breadcrumbs a:before {
+  display: none; 
+}
+
+.breadcrumbs a:before,
+.breadcrumbs span:before {
   content: "";
   margin-right: 10px;
   height: 5px;
@@ -1832,8 +1853,13 @@ table td:nth-child(2n) {
   transform: rotate(45deg);
   float: left;
   display: block; }
+
+
 .breadcrumbs a:hover {
   text-decoration: underline; }
+
+
+
 
 .controlGrid {
   position: relative;

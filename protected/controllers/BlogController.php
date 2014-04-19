@@ -1,28 +1,62 @@
-<?php
+﻿<?php
 
 class BlogController extends Controller
 {
+
+	public $modelClass = "Blog";
+
+
 	public function actionIndex(){
-		$this->render('index');
+		//$model = CActiveRecord::model($this->modelClass)->findAll();
+		$dataProvider = new CActiveDataProvider($this->modelClass,
+			array(
+				'pagination'=>array(
+	        		'pageSize'=>2,
+	        		),
+        	)
+        );
+		
+		$this->render('index' ,array(
+			"model"=>$dataProvider));
+
 	}
+
+
+	public function actionCat($id){
+		$criteria=new CDbCriteria;
+		$criteria->condition = 'blog_cat.id_cat = :id_c';
+		
+		$criteria->join = "LEFT JOIN blog_cat ON blog_cat.id_blog = id";
+		$criteria->params = array(':id_c'=>$id);
+		
+		
+		$dataProvider = new CActiveDataProvider($this->modelClass,
+			array(
+				'criteria'=>$criteria,
+				'pagination'=>array(
+	        		'pageSize'=>2,
+	        		),
+        	)
+        );
+
+        $cat = BlogCatList::model()->findByPk($id);
+
+		$this->render('index' ,array(
+			"model"=>$dataProvider,
+			"title" => $cat->title,
+			));
+	}
+
 
 
 	public function actionView($id){
-		$this->render('view');
+		$model = CActiveRecord::model($this->modelClass)->findByPk($id);
+		$this->render('view', array(
+				'model'=>$model,
+			));
 	}
 
-
-
-	public function actionError()
-	{
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
+	public static function getCategories(){
+		return Blog::getCategories();
 	}
-
-
 }

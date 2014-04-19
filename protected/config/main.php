@@ -1,10 +1,11 @@
-﻿<?php
+<?
+
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Хопр',
 	'theme'=> 'classic',
-	'language'=> 'ru',
+	'language'=> 'en',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -32,6 +33,17 @@ return array(
 
 	// application components
 	'components'=>array(
+
+		'widgetFactory'=>array(
+            'widgets'=>array(
+                'CLinkPager'=>array(
+                    'maxButtonCount'=>5,
+                    'cssFile'=>false,
+                ),
+            ),
+        ),
+
+
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

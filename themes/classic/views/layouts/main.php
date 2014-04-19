@@ -74,7 +74,7 @@
 			<ul id="main_menu">
 				<li class="active"><a href="/">Home</a></li>
 				<li><a href="/blog/">Blog</a></li>
-				<li><a href="/blog/10">Blog View</a></li>
+				<li><a href="/blog/1">Blog View</a></li>
 				<li><a href="/object/">Production</a>
 					<ul>
 						<li><a href="/object/10">View</a></li>
